@@ -5,7 +5,10 @@ function stringChop(str, size) {
 		return chunks;
 	}
 
-	for(int i=0; i<str.length; i=i+size){
+	// Ensure size is an integer
+  size = parseInt(size, 10);
+
+	for(let i=0; i<str.length; i=i+size){
 		chunks.push(str.slice(i, i+size));
 	}
 
